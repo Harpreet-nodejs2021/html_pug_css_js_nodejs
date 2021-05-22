@@ -1,0 +1,9 @@
+mixin product(myProduct)
+  .product-wrapper 
+   h2= myProduct.title 
+   p= myProduct.description
+//- Note: "h2 =" is wrong syntax (tag_name <space> Assignment Operator/ equal to sign), rather "h2=" is correct syntax, or same is the case when using any other tag in .pug file//
+
+//- We can apply a class using dot (".") - ".product-wrapper" is a div class. Likewise, for applying css to our pug files, we use dot. //
+
+//- Style applied to ".product-wrapper" is applied to both h2 and p tags' content. So if we just want the style to be applied to h2 tag, then we will write - "h2.product-wrapper = myProduct.title"//

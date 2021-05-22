@@ -1,0 +1,24 @@
+doctype html
+//- Writing include statement in order to use "Mixin" defined in another file
+include May19_product-mixin
+html(lang='en')
+ head
+  title= mytitle 
+
+ body 
+  h1= message 
+  div.container 
+  p Starting with PUG!
+  //- p Product 1
+  //- p Product 2 and so on - Writing multiple products in one file - HTML pages listing the products and alot of code peices are repeated in them//
+
+  //- So the Alternative solution to avoid such repetion while listing the products is using the "Mixin" Templates (A feature of PUG). Usually "Mixin" are created in a separate file. In short, when we need to reuse a code block over and over again, then we use "Mixin".//
+
+  +product({title: 'Nice Weather', description: 'Feels like going out for a walk'})
+  //- Another Product Below//
+  +product({title: 'Bad Weather', description: 'There\'s a thunderstorm'})
+  //- JSON Objects are passed in above statements//
+
+  //- In "May19_product-mixin.pug" file, the ".product-wrapper" is a div class - In HTML format, we would have written the same peice as <div class="product-wrapper"> <h2>Nice Weather</h2> <p>Feels like going out for a walk</p></div>//
+
+//- On running this file in local host/ local server, we can click on "inspect" option and view the HTML format of the pug file being executed.//

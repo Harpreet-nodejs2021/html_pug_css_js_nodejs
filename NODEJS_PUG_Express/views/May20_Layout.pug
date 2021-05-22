@@ -1,0 +1,9 @@
+doctype html
+html(lang='en')
+ head
+  title= mytitle 
+ body 
+  h1 Welcome to my website! 
+  block content
+
+  //- During execution on web server (Localhost at port 3002), "block content" is getting replaced with the code peice written in "May20_index.pug" file, where we used the command "extend May20_Layout.pug"//

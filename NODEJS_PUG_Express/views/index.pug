@@ -1,0 +1,9 @@
+extend ./May20_Page_Layout.pug
+block content
+    h1 superheroes
+    p This displays superhero information 
+    each item in superheroes
+        div.superhero-container
+         h2= item.name
+         a(href="/superheros/" + item.id) details 
+    //- Default entry point file in pug "index.pug" - This is the same name as our entry point javascript file (index.js)

@@ -1,0 +1,11 @@
+extend ./May20_Layout.pug
+//- Writing include statement in order to use "Mixin" defined in another file
+include May20_Product_Mixin
+
+block content 
+  h1= message 
+  div.container 
+  p Starting with PUG!
+
+  +product({title: 'Nice Weather', description: 'Feels like going out for a walk'})
+  +product({title: 'Bad Weather', description: 'There\'s a thunderstorm'})
