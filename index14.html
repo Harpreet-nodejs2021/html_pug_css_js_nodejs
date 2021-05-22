@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create User</title>
+</head>
+<body>
+    <h1>Create User</h1>
+    <hr>
+    <form action="April14_create_user.html" method="GET" enctype="application/x-www-form-urlencoded">
+        
+        <fieldset>
+            <legend>User Form</legend>
+            <label for="username">Username<input type="text" name="username" id="username" size="30" maxlength="12" placeholder="username"></label>
+            <br>
+            <label for="password">Password<input type="password" size="30" maxlength="8" placeholder="password"></label>
+        </fieldset>
+
+        <p>Select your favourite superhero</p>
+        <label><input type="radio" name="superheros" value="Superman">Superman</label><br>
+        <label><input type="radio" name="superheros" value="Batman" checked>Batman</label><br>
+        <label><input type="radio" name="superheros" value="Wonder Woman">Wonder Woman</label><br>
+        <label><input type="radio" name="superheros" value="Flash">Flash</label><br>
+        <label><input type="radio" name="superheros" value="Thor">Thor</label><br>
+        <label><input type="radio" name="superheros" value="Hulk">Hulk</label><br>
+
+        <p>Select your favourite video game</p>
+        <label><input type="checkbox" name="vidoegames" value="Fifa" checked>Fifa</label><br>
+        <label><input type="checkbox" name="vidoegames" value="NHL">NHL</label><br>
+        <label><input type="checkbox" name="vidoegames" value="Residen Evil">Residen Evil</label><br>
+        <label><input type="checkbox" name="vidoegames" value="Uncharted" checked="checked">Uncharted</label><br>
+
+        <p>Hidden input</p>
+        <input type="hidden" name="userid" value="2300">
+        <hr>
+        <label for="userBirthday">Select your birthday<input type="date" name="userBirthday" id="userBirthday"></label>
+        <br>
+        <label for="userEmailid">Enter your email<input type="email" name="userEmailid" id="userEmailid"></label>
+        <br>
+        <label for="yourSite">Input your site URL<input type="url" name="yourSite" id="yourSite"></label>
+        <br>
+        <p>Click Image Button/Graphical Submit Button below to submit this form</p>
+        <label><input type="image" name="login" src="About us/register_button.png" width="120" height="40"></label>
+    </form>
+    <form action="https://www.google.ca/search">
+        <label for="q">
+            <input type="search" name="q" id="q" value="YOUR_SEARCH_VALUE">
+        </label>
+        <label for="searchBtn"><input type="submit" name="searchBtn" id="searchBtn" value="Press Search"></label>
+    </form>
+</body>
+</html>

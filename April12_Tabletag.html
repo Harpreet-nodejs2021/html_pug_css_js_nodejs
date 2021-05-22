@@ -1,0 +1,204 @@
+<html>
+    <head>
+        <title>
+            Table
+        </title>
+    </head>
+    <body>
+        <h1>Playing with Table Tag</h1>
+        <table>
+            <tr>
+                <th>Days</th>
+                <th>Months</th>
+                <th>Seasons</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>January</td>
+                <td>Winter</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>February</td>
+                 <!-- empty column # 3 -->
+            </tr>
+            <!-- empty row -->
+            <tr></tr>
+            <tr>
+                <td>Tuesday</td>
+                 <!-- empty column # 2 -->
+                <td></td>
+                <td>Summer</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Adding border and background color to Table, and width attribute applied to an individual cell</h1>
+        <table border="1" bgcolor="yellow">
+            <tr>
+                <th>Name</th>
+                <th width="120px">Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Harry</td>
+                <td>25</td>
+                <td>Winnipeg</td>
+            </tr>
+            <tr>
+                <td>Bill</td>
+                <td>35</td>
+                 <!-- empty column # 3 -->
+            </tr>
+            <!-- empty row -->
+            <tr></tr>
+            <tr>
+                <td>James</td>
+                 <!-- empty column # 2 -->
+                <td></td>
+                <td>Toronto</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Another Table with thick border and Cells with different Bg color</h1>
+        <table border="15" bgcolor="lightblue" width="500">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Harry</td>
+                <td>25</td>
+                <td>Winnipeg</td>
+            </tr>
+            <tr>
+                <td bgcolor="pink">Bill</td>
+                <td>35</td>
+                 <!-- empty column # 3 -->
+            </tr>
+            <!-- empty row -->
+            <tr></tr>
+            <tr bgcolor="orange">
+                <td>James</td>
+                 <!-- empty column # 2 -->
+                <td></td>
+                <td>Toronto</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Cell padding</h1>
+        <!--To provide additional control over how cells fit into (or span across) columns, both th and td support the colspan attribute, which lets you specify how many columns wide the cell should be, with the default being 1.-->
+        <table border="15" bgcolor="lightblue" width="500" cellpadding="20">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Harry</td>
+                <td>25</td>
+                <td>Winnipeg</td>
+            </tr>
+            <tr>
+                <td>Bill</td>
+                <td>35</td>
+                 <!-- empty column # 3 -->
+            </tr>
+            <!-- empty row -->
+            <tr></tr>
+            <tr>
+                <td>James</td>
+                 <!-- empty column # 2 -->
+                <td></td>
+                <td>Toronto</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Cell padding and cell spacing</h1>
+        <table border="15" bgcolor="lightblue" width="500" cellpadding="20" cellspacing="30">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Harry</td>
+                <td>25</td>
+                <td>Winnipeg</td>
+            </tr>
+            <tr>
+                <td>Bill</td>
+                <td>35</td>
+                 <!-- empty column # 3 -->
+            </tr>
+            <!-- empty row -->
+            <tr></tr>
+            <tr>
+                <td>James</td>
+                 <!-- empty column # 2 -->
+                <td></td>
+                <td>Toronto</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Without Row span & Column span</h1>
+        <table border="10" bordercolor="green">
+            <tr>
+                <th>Days</th>
+                <th>Months</th>
+                <th>Seasons</th>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>January</td>
+                <td>Winter</td>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>February</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>April</td>
+                <td>Spring</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                 <!-- empty column # 2 -->
+                <td></td>
+                <td>Summer</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>With Row span & Column span</h1>
+        <table border="10" bordercolor="green">
+            <tr>
+                <th>Days</th>
+                <th>Months</th>
+                <th>Seasons</th>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>January</td>
+                <td>Winter</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Monday</td>
+                <td colspan="3">February</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>April</td>
+                <td>Spring</td>
+            </tr>
+            <tr>
+                <td colspan="2">Wednesday</td>
+                 <!-- empty column # 2 -->
+                <td></td>
+                <td>Summer</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+div a{
+    color: gold;
+}
+
+a{
+    color: green;
+}
+
+p a{
+    color: pink;
+}
+
+div > span{
+    color: red;
+}
+
+p > span{
+    color:royalblue;
+}
+
+div::first-line{
+    color: green;
+}
+div{
+    color: blueviolet;
+}
+div::first-letter{
+    color: wheat;
+}
+p + span{
+    color: brown;
+}
+div ~ p{
+    color: chartreuse;
+}

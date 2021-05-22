@@ -1,0 +1,52 @@
+<html>
+    <head><title>Form Tag</title></head>
+    <body>
+        <form action="April14_create_user.html" method="POST">
+            <fieldset>
+                <legend>User form</legend>
+                <label for="loginid">User name</label>
+                <input type="text" name="login" id="loginid" value="" placeholder="Please input a username">
+                <br>
+                <label>Firstname</label>
+                <input type="text" name="Firstname" minlength="3" maxlength="6" placeholder="Enter your firstname" size="10">
+                <!-- The size attribute specified the number of characters the text input can display at a time -->
+                <br>
+                <label for="password">
+                    Password
+                    <input type="password" id="password" name="Password" minlength="8" maxlength="20">
+                </label>      
+                <!--
+        Remember that this hidden text (PASSWORD) is just a visual effect
+        Use HTTPS to send client data to the server
+                -->
+            </fieldset>
+        
+        <!-- The available types are as follows: button, checkbox, color, date, datetime-local, email, file, hidden, image, month, number, password, range, reset, search, submit, tel, text, time, url, week -->
+        
+            <fieldset>
+                <legend>Playing with Radio Buttons</legend>
+                <p>Do you live in Winnipeg?</p>
+                <label>Yes
+                    <input type="radio" name="Residency" value="Yes">Oh Yeah! I am a Winnipegger!
+                </label>
+            
+                <br>
+                <label>No</label>
+                <!-- The user will see a legend next to each radio button by using a label element or just plain text -->
+                <input type="radio" name="Residency" value="No"> No! I am an outsider!
+                <br>
+                <p>What is your favourite color?</p>
+        
+                <label for="idRed">Red</label>
+                <input type="radio" name="favColor" value="Red" id="idRed" checked="checked">
+            
+                <label for="idGreen">Green</label>
+                <input type="radio" name="favColor" value="Green" id="idGreen">
+            
+                <label for="idBlue">Blue</label>
+                <input type="radio" name="favColor" value="Blue" id="idBlue">
+            </fieldset>
+            <input type="submit" value="Submit my input">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+p{
+    background-color: cornflowerblue;
+    width: 170px;
+    height: 80px;
+    overflow: visible;
+}
+
+.scrollex1{
+    background-color: crimson;
+    width: 300px;
+    height: 90px;
+    overflow: scroll;
+    margin: 50px;
+    box-shadow: 2px 3px 170px -8px rgba(0,0,0,0.8);
+}
+
+.scrollHidden{
+    background-color: pink;
+    width: 200px;
+    height: 180px;
+    overflow: hidden;
+    margin: 50px;
+}
+
+.scrollAuto{
+    background-color: pink;
+    width: 200px;
+    height: 180px;
+    overflow: auto;
+    margin: 50px;
+}

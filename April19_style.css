@@ -1,0 +1,33 @@
+span{
+    color:brown
+}
+div,p{
+    color: #00F;
+}
+.brown{
+    color: brown;
+}
+#month{
+    color: rgb(255,33,27)
+}
+#year{
+    color: orange;
+}
+.username{
+    color:green;
+}
+#userId{
+    color: gold;
+}
+*{
+    color: darkgray;
+}
+div[name="day"]{
+    color: darkorange;
+}
+a:visited{
+    color: deeppink;
+}
+a:hover{
+    color: forestgreen;
+}

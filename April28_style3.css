@@ -1,0 +1,35 @@
+ul{
+    list-style-type: square;
+    list-style-position:inside;
+}
+ol{
+    list-style-type: lower_roman outside;
+    /* list-style-position:outside; */
+}
+
+table{
+    border-spacing: 50px;
+    /* border-collapse: collapse; */
+}
+
+input[type="text"] {
+    border: 1 px solid purple;
+    color: purple;
+    outline: none;
+}
+
+input.error{
+    color: green;
+    border-color:hotpink;
+}
+
+input[type="text"].success{
+    color: cyan;
+    border-color: navy;
+}
+
+div.weekdays{
+    text-decoration: underline;
+    color: goldenrod;
+    border-color: navy;
+}

@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <meta name="author" content="Harry Singh">
+        <meta charset="UTF-8">
+        <meta name="description" content="HTML Tags exercise April 15">
+        <meta name="keywords" content="HTML,CSS">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>April 15 form tag+CSS</title>
+
+        <link href="April15_style.css" type="text/css" rel="Stylesheet">
+    </head>
+    <body>
+        <form action="April14_create_user.html" method="GET" enctype="application/x-www-form-urlencoded">
+            <input type="hidden" name="productID" value="1">
+            <!-- Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content -->
+            Select your fav color:
+            <input type="checkbox" name="favcolor" value="Red"> Red
+            <input type="checkbox" name="favcolor" value="Blue"> Blue
+            <input type="checkbox" name="favcolor" value="Green"> Green
+            <input type="checkbox" name="favcolor" value="Gray"> Gray
+            
+            <input type="reset" name="clear" value="Clear your selection(s)">
+            <br>
+            <p>Button tag (Without any functionality)</p>
+            <button value="clickme" name="clickhere">
+                Click here to see magic
+            </button>
+
+            <p>For using image button to submit the form</p>
+            <input type="image" name="favcolor" width="120" height="80" src="Test_Image.jpg">
+            <input type="image" name="favcolor" src="Stanley_cup.jpg" width="120" height="80">
+
+            <hr>
+            <br>
+            <p>Text Area tag</p>
+            <textarea name="txtarea" cols="10" rows="5">My name is Happy!</textarea>
+            <br>
+            <textarea name="txtarea" placeholder="Type the text" cols="10" rows="5"></textarea>
+            <hr>
+            <br>
+            <!-- Use Select tag for Drop down-->
+            <div class="brown">
+                Choose an option
+                <select name="positions" multiple="multiple" size="4"><!-- To see multiple values under dropdown. Use CTRL button on keyboard to select multiple option-->
+                    <option class="brown">First</option>
+                    <option>Second</option>
+                    <option>Third</option>
+                    <option class="brown">Fourth</option>
+                    <option>Fifth</option>
+                    <option>None</option>
+                </select>
+            </div>
+            
+            <label>Which country do you live in?
+                <br>
+                <select name="countries">
+                  <option value="">Please select a Country</option>
+                  <option value="arg">Argentina</option>
+                  <option value="bra">Brasil</option>
+                  <option value="chl">Chile</option>
+                  <option value="can">Canada</option>
+                </select>
+            </label>
+            <br>
+            <label>Which country do you live in?
+                <select name="countries">
+                    <option value="">Please select a Country</option>
+                    <option value="arg">Argentina</option>
+                    <option value="bra">Brasil</option>
+                    <option value="chl">Chile</option>
+                    <option value="can" selected="selected">Canada</option>
+                  </select>
+            </label>
+            <div style="background-color: yellow; height: 300px; border: black;">
+                <input type="file" name="filename">
+                <br>
+                <input type="file" accept=".jpg,.pdf,.doc,.txt" name="filename" multiple>
+                <br>
+                <input type="date" name="mybirthday">
+                <br>
+                <input id="date" type="date" value="1980-04-02">
+                <br>
+                <input type="email" name="email" placeholder="Please enter your email id">
+                <br>
+                <input type="url" name="personalsite" placeholder="Please enter a valid URL">
+                <br>
+                <input type="search" name="query" placeholder="Type here to search">
+            </div>
+            <span>Form validation on client side</span>
+            <br>
+            <label>Enter your Name
+                <input type="text" name="firstname" required="required">
+                * This is a required field
+            </label>
+            <br>
+            <!-- iframe element represents a nested browsing context -->
+            <span>Iframe Tag without border</span>
+            <br>
+            <iframe src="index4.html" height="500" width="300" seamless frameborder="0"></iframe>
+            <hr>
+            <span>Another Iframe Tag with border and different width</span>
+            <br>
+            <iframe src="index4.html" height="500" width="500" seamless></iframe>
+            <hr>
+            <br>
+            <span>Adding Media to our webpage</span>
+            <br>
+            <video src="Sample_video_tag.mp4" poster="Sample_video_tag.jpg" width="600" height="400" controls autoplay>
+                <p>Video description</p>
+            </video>
+            <br>
+            <video src="Sample_video_tag.mp4" width="500" height="350" autoplay loop>
+                <p>Video description</p>
+            </video>
+            <br>
+            <input type="submit" name="submit" value="Click2Submit">
+        </form>
+        <form>
+            Regular Expression
+            <input type="text" name="name" pattern="^[a-zA-Z]+$" placeholder="name" title="Input only letters" /> 
+            <input type="text" name="age" pattern="\d+" placeholder="age" title="Input only numbers" />
+            <input type="submit" name="submit" value="Submit">
+          </form>
+          <div style="background-color: lightgreen;">
+              HTML Entity
+              <p>&lt; less than</p>
+              <p>&gt; greater than</p>
+              <p>&amp; ampersand</p>
+              <p>&copy; Copyright</p>
+              <p>&reg; Registered Trademark</p>
+              <p>&trade; Trademark</p>
+          </div>
+    </body>
+</html>

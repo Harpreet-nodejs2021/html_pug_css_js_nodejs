@@ -1,0 +1,57 @@
+.firstspan{
+    border: solid 1px green;
+    margin: 5px;
+    cursor: help;
+}
+
+.secondspan{
+    border: dashed 1px green;
+    margin: 5px;
+    width: 160px;
+    display: block;
+    cursor: wait;
+}
+
+.thirdspan{
+    border: solid 1px green;
+    margin: 5px;
+    display: inline;
+    cursor: crosshair;
+}
+
+.fourthspan{
+    margin: 5px;
+    border: solid 1px green;
+    display: none;
+}
+
+.fifthspan{
+    margin: 5px;
+    font-size: 30px;
+    border: solid 1px green;
+    visibility: visible;
+}
+
+.sixthspan{
+    margin: 5px;
+    font-size: 50px;
+    border: solid 1px green;
+    visibility: hidden;
+}
+
+p{
+    color: chocolate;
+    background-image: url("https://4.bp.blogspot.com/-cibC376RUHQ/VzsmvGC4YLI/AAAAAAAAB_Y/H0PfW_nUTZUt2qmmdPbaF_Qeh5l-DM9mwCLcB/w1200-h630-p-k-no-nu/barcelona%2Blogo.jpg");
+    background-repeat: repeat;
+    width:800px;
+    height: 430px;
+}
+
+section{
+    color: blue;
+    font-size: 20px;
+    background-image: url("About us/dog_2_big.jpg");
+    background-repeat: repeat-y;
+    width:700px;
+    height: 600px;
+}
