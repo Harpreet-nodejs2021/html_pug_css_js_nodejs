@@ -109,16 +109,16 @@ console.log(`The Player ${player.name} has ${player.energy} % energy and ${playe
 
 player.loseEnergy(40);
 
-console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`);
+console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`); // The Player Joseph has 0 % energy and 1 lives
 
-player.loseLife(); // The Player Joseph has 0 % energy and 1 lives
+player.loseLife();
 
-console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`);
+console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`); // The Player Joseph has 0 % energy and 0 lives
 
-player.recoverLife(); // The Player Joseph has 0 % energy and 0 lives
+player.recoverLife();
 
-console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`);
+console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`); // The Player Joseph has 100 % energy and 1 lives
 
-player.recoverLife(); // The Player Joseph has 100 % energy and 1 lives
+player.recoverLife();
 
 console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`); // The Player Joseph has 100 % energy and 2 lives
