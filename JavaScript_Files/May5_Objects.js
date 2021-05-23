@@ -1,19 +1,18 @@
-// Filter method on Arrays
-
-var grades = [1,7,9,3,4,4,2,5,8,10,6];
-var firstClass = grades.filter(function(marks){
-    return marks >=6; // It checks conditions. Avoiding Iterations (For Loop/ IF statement, et.)
-});
-
-console.log(firstClass); // [ 7, 9, 8, 10, 6 ]
-
 // Objects - Used when working with data
+
+// An object literal is a list of zero or more pairs of property names and associated values of an object
+
+const myObject = {}; // object assigned to a variable
 
 // Key-Value pair (properties & their values)
 
 // Object is defined as "var" or "const" and using Curly brackets.
 
-// Person is an Object. His//her name, age, height, et. are his/her properties.
+// Person is an Object. His/her name, age, height, etc. are his/her properties.
+
+// Properties have a name (just like variables). To assign a value to a property we use colon.
+
+// Properties are separated using comas. Properties can be of any type of value.
 
 // We do not need to define properties as var or const as we are defining them in the Object.
 
@@ -22,39 +21,95 @@ var person = {
     age: 30,
     // Method of an Object. This function has access to all properties of this Object when we use the keyword "this method"
     greet: function(){
-        console.log("Hello! " + this.myName);
+        console.log("Hello! " + this.myName); // In the methods body, we can access the current object properties using the "this" reserved word.
     },
-    // Another method
+    // In JS, an object method is a property with a function as value.
     birthday: function(){
-        this.age++;    }
+        // Inside an object method, we can update an object property value
+        this.age++; // Object Property "birthday": has a function assigned as value
+    },
+    covid19: function(myName) {
+        // A method can also accept parameters
+        console.log(`Hi ${myName}, are you vaccinated?`);
+      }
 };
 
 console.log(person); // Printing the object - Output below
 
-//{
-//    myName: 'Harry Singh',
-//    age: 30,
-//    greet: [Function: greet],
-//    birthday: [Function: birthday]
-//  }
+/*
+{
+  myName: 'Harry Singh',
+  age: 30,
+  greet: [Function: greet],
+  birthday: [Function: birthday],
+  covid19: [Function: covid19]
+}
+*/
 
-
+// We can access an object property using the object name, dot and the property name.
 console.log(person.myName); // Harry Singh
-console.log(person.age); // 30
 
-// Objects have Dynamic properties. We will not get any Error.
+//-------------------------------------------------
 
-console.log(person.city); // undefined
+console.log(person.city); // We can access a property that doesn't exist on the object and get undefined as value.
 
+console.log(person.married); // undefined
+
+/* 
+Object properties in JavaScript are dynamic. We will not get any Error.
+
+This means that if we assign a value to an object property that hasn't been defined it will create it.
+*/
 person.city = "Winnipeg"; // Dynamically adding a property & its value
 
 console.log(person.city); // Winnipeg
 
-person.greet();// Hello! Harry Singh
+person.married = true;
 
-person.birthday();
+console.log(person.married); // true
+
+//-------------------------------------------------
+
+// "greet();" -> Calling a function without the object
+
+person.greet; // "person.greet" without the parenthesis will return the function definition (No Output)
+
+person.greet();// Hello! Harry Singh -> Calling an object method
+
+console.log(person.age); // 30
+
+person.birthday(); // Calling an object method - it will execute the Method/ function code
 
 console.log(person.age);// 31
+
+//-------------------------------------------------
+
+// Calling a method is similar to calling just a function.
+// We are actually calling a function that's an object property.
+
+person.covid19('Chloe'); // Hi Chloe, are you vaccinated? -> Passing parameter to an object method
+
+//-------------------------------------------------
+
+// Changing a property value can be done the same way that you would do it for a variable
+
+person.myName = 'Henry';
+person.age = 25;
+
+console.log(person);
+/*
+{
+  myName: 'Henry',
+  age: 25,
+  greet: [Function: greet],
+  birthday: [Function: birthday],
+  covid19: [Function: covid19],
+  city: 'Winnipeg',
+  married: true
+}
+*/
+
+//-------------------------------------------------
 
 // Defining a function named PRINT
 
