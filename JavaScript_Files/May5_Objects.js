@@ -51,6 +51,25 @@ console.log(person.myName); // Harry Singh
 
 //-------------------------------------------------
 
+// Object dynamic properties
+
+console.log(person['myName']); // Harry Singh
+
+// Using [] and a string value with the property name we can access the object property value
+console.log(person['age']); // 30
+
+// Alternatively, we can also use variables to do the same
+
+const whatName = 'myName';
+
+console.log(person[whatName]); // Harry Singh
+
+const age = 'age';
+
+console.log(person[age]); // 30
+
+//-------------------------------------------------
+
 console.log(person.city); // We can access a property that doesn't exist on the object and get undefined as value.
 
 console.log(person.married); // undefined
@@ -117,19 +136,49 @@ function print(yourInfo){
     console.log("Hello! I am " + yourInfo + " years old");
 }
 
-print(person.age); // Calling the function "PRINT" -> Hello! I am 31 years old
+print(person.age); // Calling the function "PRINT" -> Hello! I am 25 years old
 
 // A function is another piece of code located in another memory address. We can see the function call process at low level programming stage/ linear programming
 
+// "Object.keys" returns an array value with all the objects properties names.
+// This method accepts an object as parameter.
+
 var properties = Object.keys(person);
-console.log(properties); // [ 'myName', 'age', 'greet', 'birthday', 'city' ]
+console.log(properties); 
+
+/*
+[
+  'myName',  'age',
+  'greet',   'birthday',
+  'covid19', 'city',
+  'married'
+]
+*/
+
+properties.forEach(function(property) {
+  console.log(person[property]);
+});
+
+/*
+Henry
+25
+[Function: greet]
+[Function: birthday]
+[Function: covid19]
+Winnipeg
+true
+*/
 
 console.log(properties[0]); // myName - Property at index 0
 
 var firstProp = properties[0];
-console.log(person[firstProp]); // Property's value gets printed - Harry Singh
+console.log(person[firstProp]); // Property's value gets printed - Henry
 
 console.log(properties[3]); // birthday
 
 // Alternative way to print value of property without assigning it to a variable.
 console.log(person[properties[3]]); // [Function: birthday]
+
+//-------------------------------------------------
+
+// A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action

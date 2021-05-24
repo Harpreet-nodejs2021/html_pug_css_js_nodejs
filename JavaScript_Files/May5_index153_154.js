@@ -68,7 +68,7 @@ var player = {
     recoverLife: function(){
         this.lives++;
         this.energy = 100; // Energy value reset to max level
-        // The player lives can't be bigger thant 99
+        // The player lives can't be bigger than 99
         if(this.lives >= 99){
             this.lives = 99; // Number of Lives reset to max level
         }
@@ -79,7 +79,7 @@ player.name='Joseph';
 
 console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`); // The Player Joseph has 100 % energy and 3 lives
 
-player.loseLife();
+player.loseLife(); // Player lose a life
 
 console.log(`The Player ${player.name} has ${player.energy} % energy and ${player.lives} lives`); // The Player Joseph has 100 % energy and 2 lives
 
