@@ -1,12 +1,18 @@
+<!DOCTYPE html>
 <html style="background-color: greenyellow;">
+<!-- Inline style - We can use the "style" attribute to apply css to only one HTML element. This attribute accepts a pair of "property : value". -->
     <head>
         <title>CSS Basics</title>
         <style type="text/css">
+        /* The "type" attribute is optional and defaults to "text/css" if it is missing. */
         span{
             color: crimson;
         }
+        /* We select all the span elements in this HTML file and apply the color property with a "CYAN" value. */
         div{
             color: cyan;
+            text-decoration: underline;
+            /* To apply more than one style, we separate the property:value with a semicolon. */
         }
         #month{
             color:grey;
@@ -16,6 +22,7 @@
     <body>
         <span>test File</span>
         <div>I like snow</div>
+        <span>CYAN TEXT</span>
         <div id="month">April</div>
     </body>
 </html>

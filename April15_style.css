@@ -1,9 +1,25 @@
+/* This selector selects all span elements */
 span{
     color:violet;
 }
+/* This selector selects all div elements */
+/* All div elements are blue */
 div{
     color: blue;
 }
+/* This selector selects all elements under this class */
 .brown{
     color: brown;
 }
+/* "color" is the CSS property that sets the foreground color value of an element's text content and text decoration.
+
+This property accepts any CSS color value.
+
+Named color: white, red, blue, green
+
+RGB (Red, Green & Blue): rgb(0,0,0)
+
+Hexadecimal color: #000000, #ffffff
+
+*/
+
