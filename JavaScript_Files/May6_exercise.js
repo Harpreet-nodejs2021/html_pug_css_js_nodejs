@@ -12,6 +12,8 @@ function print(){
 
 // greet(); // This will throw error -> Function "greet" is accessible within the function "print".
 
+//------------------------------------------
+
 // Arguments - It is an Array-Like Object
 
 function addition(){

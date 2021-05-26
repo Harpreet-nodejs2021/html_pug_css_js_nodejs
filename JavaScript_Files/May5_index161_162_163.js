@@ -134,12 +134,15 @@ sean_cummings
 
 //-----------------------------------------
 
+// "Arguments object" is an Array-like object corresponding to the arguments passed to a function.
+
 function add(){
     let sum = 0;
     for(let i = 0; i < arguments.length; i++){
         // sum = sum + arguments[i];
         sum += arguments[i]; // Alternative way
     }
+    console.log(arguments);
     console.log(sum);
     return sum;
 }
@@ -148,6 +151,23 @@ function add(){
 
 add(1,2,3,4,5); // 15
 
+// [Arguments] { '0': 1, '1': 2, '2': 3, '3': 4, '4': 5 }
+
 // Passing 10 numbers to "add" function
 
 add(1,2,3,4,5,6,7,8,9,10); // 55
+
+/*
+[Arguments] {
+  '0': 1,
+  '1': 2,
+  '2': 3,
+  '3': 4,
+  '4': 5,
+  '5': 6,
+  '6': 7,
+  '7': 8,
+  '8': 9,
+  '9': 10
+}
+*/

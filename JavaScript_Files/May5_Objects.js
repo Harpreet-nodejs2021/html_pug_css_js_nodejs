@@ -182,3 +182,140 @@ console.log(person[properties[3]]); // [Function: birthday]
 //-------------------------------------------------
 
 // A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action
+
+/*
+A callback is just a function passed as parameter to other function.
+
+The function that received the function as parameter will call it.
+
+A callback function can get one or many parameters.
+*/
+
+let tenNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Callback (to iterate over arrays)
+tenNumbers.forEach(function(number) {
+  console.log(number); /*
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+  */
+})
+
+// Callback
+let evenNumbers = tenNumbers.filter(function(number) {
+  return number % 2 === 0;
+});
+
+console.log(evenNumbers); // [ 2, 4, 6, 8, 10 ]
+
+// Callback
+let result = 0;
+
+result = tenNumbers.reduce(function(result, number) {
+  return result + number;
+});
+
+console.log(result); // 55
+
+// Callback
+let mappedNumbers = tenNumbers.map(function(number) {
+  return number + 10;
+});
+
+console.log(mappedNumbers); /* [
+  11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20
+] */
+
+// We can see that the filter, reduce and map functions receive a function as parameter.
+
+//-------------------------------------------------
+
+// Functions inside functions - Child functions can access their parent function's parameters
+
+function welcome(someName) {// Parent Function
+  let message = 'Hello';
+  
+  function greet(value) {// Child Function
+    return message + ' ' + value;
+  }
+
+  return greet(someName);
+}
+
+console.log(welcome('Ruby')); // Hello Ruby
+
+//-------------------------------------------------
+
+// "Recursion" is an act of a function calling itself.
+
+function showNumber(startingNum) {
+  
+  if (startingNum <= 10) { 
+    console.log('Playing with Recursion:',startingNum)
+    startingNum++;
+    showNumber(startingNum); // "showNumber" is a recursive function. If "startingNum" is bigger than 10, then the "showNumber" function stops calling itself.
+  }
+}
+
+showNumber(0);
+
+/*
+Playing with Recursion: 0
+Playing with Recursion: 1
+Playing with Recursion: 2
+Playing with Recursion: 3
+Playing with Recursion: 4
+Playing with Recursion: 5
+Playing with Recursion: 6
+Playing with Recursion: 7
+Playing with Recursion: 8
+Playing with Recursion: 9
+Playing with Recursion: 10
+*/
+
+//-------------------------------------------------
+
+// Returning a function from a function - 
+
+/*
+A function can return a value.
+
+In JavaScript, functions are a type of value.
+*/
+
+function total(someNumber) {
+  
+  let addBothNumbers = function(anotherNumber) {
+    return someNumber + anotherNumber;
+  }
+  
+  return addBothNumbers;
+}
+
+// We call the "total" function and pass 10 as a parameter.
+
+// The "total" function returns a function that's "addBothNumbers"
+const adding = total(10); // We assign the returned function in the "adding" variable.
+
+const amount = adding(20); // We can pass a parameter when we call the "adding" function.
+
+/*
+The "addBothNumbers" gets executed using the "adding" function.
+
+"addBothNumbers" will add number 20 that is the value that we get from the "anotherNumber" parameter and 10 that was the number passed as parameter to the parent function.
+*/
+
+console.log(amount); // 30
+
+console.log(typeof adding); // function
+
+console.log(typeof amount); // number

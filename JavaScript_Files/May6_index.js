@@ -9,6 +9,44 @@ var myInfo = "Harry"; // undefined variable - Variable defined afterwards
 
 console.log(myInfo); // Now the value of the variable will get printed - "Harry"
 
+//-------------------------------------------------
+
+// Another example of Hoisting
+
+console.log(weatherToday); // undefined
+
+var weatherToday = 'nice';
+
+console.log(weatherToday); // nice
+
+//-------------------------------------------------
+
+// Scope - Local & Global Scope
+
+/*
+Scope is the current context of execution.
+
+The context in which values and expressions are "visible," or can be referenced.
+
+"let" and "const" data types have block element scope, not "var".
+*/
+
+{
+    var anyName = 'Chloe'; // Global Scope
+    console.log(anyName); // Chloe
+}
+  
+console.log(anyName); // Chloe
+  
+{
+    let otherName = 'Leger'; // Local Scope
+    console.log(otherName); // Leger
+}
+  
+// console.log(otherName); // Error - otherName is not defined
+
+//-------------------------------------------------
+
 // Scope of variable - global & local
 
 {
@@ -33,7 +71,7 @@ function printCity(){
     address = "100 Main St"; // By default, the identified of variable is "var". 
 }
 
-printCity(); // function call - Output -> "Winnipeg" & Ireland
+printCity(); // function call - Output -> "Winnipeg" & "Ireland"
 
 console.log(city); // Output - Calgary
 
@@ -45,9 +83,9 @@ function assignInfo(){
         myName : 'Harry Singh',
         myAge : 30
     };
-    console.log(person); // { myName: 'Harry Singh', myAge: 30 }
+    console.log(person); // Local scope
 }
 
-//console.log(person); // This throw error
+//console.log(person); // This throws error
 
-assignInfo(); // Function call
+assignInfo(); // Function call -> Output -> { myName: 'Harry Singh', myAge: 30 }
