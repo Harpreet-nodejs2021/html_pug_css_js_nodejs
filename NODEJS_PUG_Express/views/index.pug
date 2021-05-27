@@ -2,6 +2,9 @@ extend ./May20_Page_Layout.pug
 block content
     h1 superheroes
     p This displays superhero information 
+
+    include ./May26_createNewSuperhero.pug
+
     each item in superheroes
         div.superhero-container
          h2= item.name
