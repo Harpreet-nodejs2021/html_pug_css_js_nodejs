@@ -7,7 +7,8 @@ span{
 div{
     color: blue;
 }
-/* This selector selects all elements under this class */
+/* Class Selector - This selector selects all elements under this class */
+/* All elements that have class="brown" */
 .brown{
     color: brown;
 }

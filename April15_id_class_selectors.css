@@ -1,0 +1,19 @@
+/* Only select the div with main id */
+div#main { color: red; }
+
+/* Only select the paragraph with blue class */
+p.blue { color: blue; }
+
+h1{
+    /*color: red; */
+    color: blue;
+}
+
+p{
+    color: gray;
+}
+
+a{
+
+    color: yellow;
+}

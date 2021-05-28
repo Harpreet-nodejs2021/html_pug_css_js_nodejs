@@ -2,9 +2,13 @@
 
 const express = require('express');
 
+const mongoClient = require('mongodb').MongoClient; // We installed the MongoDB driver first.
+
 const app = express();
 
 const port = 3000; // Local Host random port #
+
+const dbURL = "mongodb://localhost:27017"; // Connection String for DB
 
 // Middleware - This code get executed before we hit the route.
 
@@ -12,6 +16,12 @@ const bodyParser = require('body-parser');
 const urlEncodedParser = bodyParser.urlencoded({extended:false}); // This piece will be used to access the Post Request's body which is otherwise not part of the URL.
 
 // "bodyParser" - Deprecated
+
+// We use "connect" method to connect to our DB, and use the call back function to print the message if connection is made or reference any error, if comes during the connection.
+
+mongoClient.connect(dbURL,function(err,client){
+    console.log('Connected with DB');
+})
 
 const superheroes = [
     { id:1, name: 'SPIDER-MAN'},
