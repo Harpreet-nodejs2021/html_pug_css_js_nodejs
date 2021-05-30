@@ -1,4 +1,6 @@
-div a{
+/* Descendant selectors - This selector is represented by a single space " " character & combines two selectors such that elements matched by the second selector are selected if they have an ancestor element matching the first selector */
+
+div a{/* Link inside a div */
     color: gold;
 }
 
@@ -6,20 +8,52 @@ a{
     color: green;
 }
 
-p a{
+p a{/* Link inside a paragraph */
     color: pink;
 }
+/*--------------------------------------------------------------*/
 
+/* Child selectors - Using the > selector we can select only those elements matched by the second selector that are the direct children of elements matched by the first. 
+
+The child combinator > is placed between two CSS selectors.
+
+Elements matched by the second selector must be the immediate children of the elements matched by the first selector.
+
+This is stricter than the descendant selector.
+*/
+
+/* Select the span elements that are direct children from a div element*/
 div > span{
     color: red;
 }
-
+/* Select the span elements that are direct children from a paragraph element*/
 p > span{
     color:royalblue;
 }
 
+/*--------------------------------------------------------------*/
+
+/* Pseudo-elements - 
+
+We use the :: operator to select pseudo-element.
+
+selector::pseudo-element {
+  property: value;
+}
+
+These are the most used pseudo-element:
+
+::first-line
+::first-letter
+::selection
+::after
+::before
+
+*/
+
 div::first-line{
     color: green;
+    text-transform: uppercase;
 }
 div{
     color: blueviolet;
@@ -27,9 +61,114 @@ div{
 div::first-letter{
     color: wheat;
 }
+
+/* Selects the first letter of a <p> */
+p::first-letter {
+    font-size: 130%;
+}
+
+h2 + p::first-letter {
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    box-shadow: 3px 3px 0 red;
+    font-size: 250%;
+    padding: 6px 3px;
+    margin-right: 6px;
+    float: left;
+}
+
+/*--------------------------------------------------------------*/
+
+/* Make selected text in a paragraph cyan on a blue background */
+p::selection {
+    color: rgb(14, 250, 250);
+    background-color: blue;
+}
+/*--------------------------------------------------------------*/
+
+/* The pseudo-elements ::after & ::before need to use a special property called content. */
+
+/* Add an arrow after links */
+a::after {
+    content: "<-";
+    color: red;
+}
+
+/* Add a heart before links */
+a::before {
+    content: "->";
+}
+/*--------------------------------------------------------------*/
+
+/* class = "exciting-text" */
+.exciting-text::after {
+    content: " <- EXCITING!";
+    color: green;
+}
+
+/* class = "boring-text" */
+.boring-text::after {
+    content: " <- BORING";
+    color: red;
+}
+/*--------------------------------------------------------------*/
+
+/* Adding quotation marks */
+q::before {
+    content: "<<";
+    color: blue;
+}
+  
+q::after {
+    content: ">>";
+    color: red;
+}
+/*--------------------------------------------------------------*/
+
+span::after {
+    content: '2';
+}
+
+span::before {
+    content: '1';
+}
+/*--------------------------------------------------------------*/
+
+/* ::file-selector-button CSS pseudo-element */
+
+input[type=file]::file-selector-button {
+    border: 2px solid #6c5ce7;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #a29bfe;
+    transition: 1s;
+}
+
+/*--------------------------------------------------------------*/
+
+/* ::marker CSS pseudo-element */
+
+ul li::marker {
+    color: red;
+    font-size: 1.5em;
+}
+/*--------------------------------------------------------------*/
+
+/* Adjacent sibling combinator - The + separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element */
+
 p + span{
     color: brown;
 }
+
+/*--------------------------------------------------------------*/
+
+/* General sibling combinator - The ~ separates two selectors and matches the second element only if it follows the first element (though not necessarily immediately), and both are children of the same parent element */
 div ~ p{
     color: chartreuse;
 }
+/* Always mention General sibling first before Putting Adjacent Sibling, otherwise, the effect of Adjacent sibling does not take place but General Sibling style is applied everywhere. */
+div + p{
+    color: brown;
+}
+/* p + div has different effect than from div + p. The former will apply style to any div after p tag, and the later will apply style to any p tag following right after div tag (The style is applied to any tag following right after). */

@@ -1,6 +1,8 @@
 /* Only select the div with main id */
 div#main { color: red; }
 
+/* Both id and class selector can be even more specific by adding the element type before the id or class selector. */
+
 /* Only select the paragraph with blue class */
 p.blue { color: blue; }
 
@@ -14,6 +16,8 @@ p{
 }
 
 a{
-
     color: yellow;
+}
+div{
+    color: green;
 }

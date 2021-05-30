@@ -1,6 +1,11 @@
 span{
     color:brown
 }
+/*
+selector1, selector2 {
+  CSS code
+}
+*/
 div,p{
     color: #00F;
 }
@@ -13,21 +18,54 @@ div,p{
 #year{
     color: orange;
 }
+
 .username{
     color:green;
 }
 #userId{
     color: gold;
 }
+
+/*--------------------------------------------------------------*/
+
+/* The universal selector (*) will match all the elements and sets the color to "darkgray".
+
+You can use this selector to delete the browser initial styles (Many CSS libraries do it)
+*/
 *{
     color: darkgray;
 }
+
+/*--------------------------------------------------------------*/
+
+/*
+Attribute selectors
+
+Select all div elements that have the "name" = "day" attribute
+*/
 div[name="day"]{
     color: darkorange;
 }
+/* Select all anchor (a) elements that have a href="#" attribute */
+a[href="#"] { color: cyan; }
+
+/*--------------------------------------------------------------*/
+
+/*
+Pseudo-classes selector - For links, we can use the following pseudo-classes: :link, :active, :hover & :visited.
+*/
+a:link {
+    color: red;
+}
+  
+a:active {
+    color: pink;
+}
+
 a:visited{
     color: deeppink;
 }
+/* :hover can be used to change a button's color when the user hovers over it */
 a:hover{
     color: forestgreen;
 }

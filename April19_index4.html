@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selectors 1</title>
+    <style>
+        /* Universal selector to make all the elements text look green */
+        *{
+            color: green;
+        }
+        /* Make the text "gray" for Element with the id = "login" */
+        #login {
+            color:gray;
+        }
+        /* Make the text "red" for Elements with Class = "red" */
+        .red{
+            color: red;
+        }
+        label,input{
+            color: pink;
+        }
+        /* Attribute selectors - Select all input elements that have the "type" = "submit" attribute */
+        input[type="submit"]{
+            color: brown;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Selectors 2</h1>
+    <hr>
+    <form id="login">
+      <div>
+        <label for="username">Username</label>
+        <input name="username" id="username" placeholder="Username">
+      </div>
+      <div>
+          <label for="password">Password</label>
+          <input name="password" id="password" placeholder="Password" type="password">
+      </div>
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+    <div>
+      <p>This text is <span class="red">red</span></p>
+      <a href="#" class="red">Link</a>
+    </div>
+  </body>
+</html>
