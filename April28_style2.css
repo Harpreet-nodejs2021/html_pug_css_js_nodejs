@@ -2,6 +2,15 @@
     border: solid 1px green;
     margin: 5px;
     cursor: help;
+    box-shadow: 2px 3px 170px -8px rgba(0,0,0,0.8); /*
+    The box-shadow property is used to add shadow effects around an element's frame. 
+
+    You can specify multiple effects separated by commas if you wish to do so.
+
+    "horizontal shadow length (2px) | vertical shadow length (3px) | blur radius (170px) | spread radius (-8px) | shadow color"
+
+    In the above used rgba function, shadow color opacity = 0.8
+    */
 }
 
 .secondspan{
@@ -10,6 +19,7 @@
     width: 160px;
     display: block;
     cursor: wait;
+    box-shadow: 2px 3px 170px -8px rgba(0,0,0,0.8) inset; /* With the Box Shadow property, we can also use the value "inset" to have an inner shadow. */
 }
 
 .thirdspan{

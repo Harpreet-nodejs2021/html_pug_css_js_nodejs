@@ -1,15 +1,21 @@
 p{
-    background-color: cornflowerblue;
+    background-color: cornflowerblue; /* The background-color property sets the background color of an element.
+
+    This property is specified as a single color value. */
     width: 170px;
     height: 80px;
-    overflow: visible;
+    overflow: visible; /* The overflow property specifies what to do when an element's content is too large to fit in its block formatting context.
+
+    It is a shorthand for the overflow-x and overflow-y properties.
+    
+    Property values: auto, hidden & scroll. */
 }
 
 .scrollex1{
     background-color: crimson;
     width: 300px;
-    height: 90px;
-    overflow: scroll;
+    height: 70px;
+    overflow-x: scroll; /* Only x-axis */
     margin: 50px;
     box-shadow: 2px 3px 170px -8px rgba(0,0,0,0.8);
 }
@@ -18,14 +24,14 @@ p{
     background-color: pink;
     width: 200px;
     height: 180px;
-    overflow: hidden;
+    overflow: hidden; /* x and y axis */
     margin: 50px;
 }
 
 .scrollAuto{
-    background-color: pink;
+    background-color: transparent; /* We can set the background color to be transparent which is also the default value. */
     width: 200px;
     height: 180px;
-    overflow: auto;
+    overflow-y: auto; /* Only y-axis */
     margin: 50px;
 }
