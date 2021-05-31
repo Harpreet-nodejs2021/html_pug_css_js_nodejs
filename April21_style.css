@@ -1,50 +1,276 @@
+/* The font-family property specifies a prioritized list of one or more font family names.
+
+Values are separated by commas to indicate that they are alternatives.
+
+The browser will select the first font in the list that is installed.
+
+If the browser can't use the first font value it will try to use the next one in the list.
+
+It's a good practice to add a generic font family.
+
+By adding a default value we make sure that at least our site has a font-family style.
+
+Generic family name list: serif, sans-serif, monospace, cursive, fantasy, system-ui.
+*/
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif; /* In this case, the browser will try to use the first value (Arial) */
+    font-weight: 700; /* The font-weight property specifies the weight (or boldness) of the font. 
+    
+    Some fonts are only available in normal and bold.
+    
+    Font weight values:
+    normal = 400
+    bold = 700
+    lighter: one font weight lighter than the parent element
+    bolder: one font weight heavier than the parent element
+
+    Number bettwen 100 & 900: numeric font weights for fonts that provide more than just normal and bold.
+    */
     background: lightblue;
 }
 div{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: capitalize;
-    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    /* We need to add double quotes if the font-family name has spaces in it. Example: "times new roman" */
+    font-size: 14px; /* The font-size property specifies the size of the font. 
+
+    Absolute value: Pixel (px); Point (pt): One point. 1pt = 1/72nd of 1 inch.
+
+    Relative values: percentage (%); (em): Represents the calculated font-size of the element. If font is 10px and 1em, then 2em is 20px.
+    */
+    font-weight: bolder;
+    text-transform: capitalize; /* The text-transform property specifies how to capitalize an element's text.
+    
+    It can be used to make text appear in all-uppercase or all-lowercase.
+    */
+    text-align: center; /* The text-align property describes how inline content like text is aligned in its parent block element. 
+    
+    We can use the following values: inherit, left, right, center, justify, justify-all, start, end, match-parent.
+
+    start: same as left if direction is left-to-right and right if direction is right-to-left.
+
+    end: same as right if direction is left-to-right and left if direction is right-to-left.
+
+    match-parent: similar to inherit.
+
+    */
     border: chocolate;
-    border-style: double;
-    border-width: 2px 5px;
-    border-radius: 55px 20px;
+    /* The border-style property is a shorthand property that sets the line style for all four sides of an element's border.
+
+    Property values: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset.
+     */
+    border-style: double; /* All borders set to double */
+    /* 
+    The border-width property is a shorthand property for setting the widths on all four sides of an element's border.
+    
+    When one value is specified, it applies the same width to all four sides.
+
+    When two values are specified, the first width applies to the top and bottom, the second to the left and right.
+
+    When three values are specified, the first width applies to the top, the second to the left and right, the third to the bottom.
+
+    When four values are specified, the widths apply to the top, right, bottom, and left in that order (clockwise).
+    */
+    border-width: 2px 5px; /* Top, Bottom are set to 2px; and left, right to 5px */
+     /*
+    The border-radius property lets you round the corners of an element's outer border edge.
+
+    You can specify a single radius to make circular corners, or two radii to make elliptical corners.
+
+    Property values: one, two, three, or four length or percentage values.
+    */
+    border-radius: 55px 10%; /* top-left-and-bottom-right | top-right-and-bottom-left */
 }
 p{
-    font-size: 3em;
-    font-weight: 500;
-    text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-decoration-color: red;
-    line-height: 70px;
-    border-color: darkblue;
-    border-style: dotted;
-    border-width: 7px;
+    font-size: 3em; /* Since the previously assigned font-size value is "14px" (as part of Div element) so we can use a relative value like "3em" to change it (42px) */
+    font-weight: 600;
+    font-style: oblique; /* The font-style CSS property specifies whether a font should be styled with a normal, italic, or oblique face from its font-family.
+    */
+    text-decoration-line: underline;/* Property values: none, underline, overline, line-through, etc. */
+    text-decoration-color: red; /* We can use it with underlines and overlines, strikethroughs, and wavy lines */
+    text-decoration-style: dashed; /* Property values: solid, double, dotted, dashed, wavy */
+    line-height: 70px; /* The line-height property sets the amount of space used for lines, such as in text. */
+    border-color: darkblue; /* 
+    The border-color property is a shorthand property for setting the colors on all four sides of an element's border.
+    */
+    border-style: dotted; /* All borders set to dotted */
+    border-width: 7px; /* Same Border width applied to all four sides of Box */
+    border-radius: 2px 4px 2px; /* top-left | top-right-and-bottom-left | bottom-right */
 }
 span{
-    font-style: italic;
-    font-size: 22px;
-    text-decoration-line: line-through;
+    font-style: italic; 
+    font-size: 22px;/* Here we set the body font size to 22px using a absolute value */
+    text-decoration-line: line-through overline; /* We can add more than one value to this property. */
     text-decoration-color: lawngreen;
-    letter-spacing: 3px;
-    text-shadow: 2px 3px 0.8px brown;
+    text-decoration-style: dotted;
+    text-shadow: 2px 3px 0.8px brown; /* The text-shadow property adds shadows to text. 
+    
+    It accepts a comma-separated list of shadows to be applied to the text and any of its decorations.
+    
+    Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
+
+    Shadow values:
+    The first two length values are the offset-x and offset-y values.
+    The third, optional, length value is the blur-radius.
+    The color value is the shadow's color.
+    */
+    letter-spacing: 3px; /* The letter-spacing property specifies the spacing behavior between text characters. */
+    word-spacing: 2px; /* The word-spacing property specifies the spacing behavior between tags and words. */
 }
 
 .weekday{
     font-style: inherit;
-    text-indent: -250px;
-    background-color: teal;
+    text-transform: lowercase;
+    text-decoration: double underline cyan; /* Single definition - Format syntax: text-decoration-style text-decoration-line text-decoration-color.
+    
+    It is same as:
+    div {
+        text-decoration-style: double;
+        text-decoration-line: underline;
+        text-decoration-color: red;
+    }
+    */
+    text-align: right;
+    text-indent: -250px; /* The text-indent property specifies the amount of indentation (empty space) that is put before lines of text in a block. */
+    background-color: blueviolet;
     word-spacing: 17px;
-    border:10px solid orange;
-    padding: 3px;
-    margin: 20px;
+    border:10px solid orange;/* The border property is a shorthand for setting all individual border property values in a single declaration.
+
+    border-width | border-style | border-color 
+
+    We can also use individual property for each of the values:
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: orange;
+    */
+    padding: 13px; /* The padding property defines the innermost portion of the box model, creating space around an element's content, inside of any defined margins and/or borders 
+    
+    When one value is specified, it applies the same padding to all four sides.
+    
+    When two values are specified, the first padding applies to the top and bottom, the second to the left and right.
+    
+    When three values are specified, the first padding applies to the top, the second to the left and right, the third to the bottom.
+    
+    When four values are specified, the paddings apply to the top, right, bottom, and left in that order (clockwise).
+    */
+    margin: 20px; /*
+    The margin property defines the outermost portion of the box model, creating space around an element, outside of any defined borders.
+    */
+    border-radius: 10px; /* Radius is set for all 4 sides */
+    /*
+    This property is a shorthand to set the four properties:
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    */
+}
+
+h1{
+    border-width: 2px 3px 5px; /* Top is set to 2px, left &  right to 3px and finaly bottom is set to 5px */
+    /* 
+    border-width: 2px 3px 8px 5px; 
+
+    top: 2px, right: 3px, bottom: 8px and left: 5px
+    */
+    border-top-style: dashed;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    border-right-style: double;
+
+    border-top-color: magenta;
+    border-bottom-color: orange;
+    border-left-color: mediumvioletred;
+    border-right-color: green;
+    
+    border-radius: 10px 0 8px 13px; /* top-left | top-right | bottom-right | bottom-left */
+    /*
+    padding: 10px 20px; 
+    
+    top, bottom: 10px and left, right: 20px
+    */
+    padding: 10px 20px 30px; /* top: 10px, left, right: 20px and bottom: 30px */
 }
 
 .custom{
     color:violet;
-    text-shadow: 5px 5px 3px greenyellow;
+    text-shadow: 5px 5px 3px greenyellow; /* offset-x | offset-y | blur-radius | color */
+    text-transform: uppercase;
+    text-align: justify;
+    text-decoration-line: overline;
+    text-decoration-color: blue;
+    text-decoration-style: wavy;
+    text-indent: 15%;
+    /* Using the border property we set the same width, style and color for all 4 element borders.
+    
+    We can also set individual borders for each border using the border name: left, top, right, bottom.
+    */
+    border-top: 3px dashed red;
+    border-bottom: 4px dotted green;
+    border-left: 5px solid purple;
+    border-right: 8px double blue;
+    /*
+    Below is the alternative way to implement the same border style.
+
+      border-top-width: 3px;
+      border-bottom-width: 4px;
+      border-left-width: 5px;
+      border-right-width: 8px;
+      
+      border-top-style: dashed;
+      border-bottom-style: dotted;
+      border-left-style: solid;
+      border-right-style: double;
+      
+      border-top-color: red;
+      border-bottom-color: green;
+      border-left-color: purple;
+      border-right-color: blue;
+    */
+    padding-top: 0px; /* We can also use the padding property to set values for each individual side */
+    padding-right: 11px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    /*
+    Alternatively
+
+    padding: 20px 11px 5px 30px;
+
+    top | right | bottom | left
+    */
+    margin-top: 30px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    /* The width property specifies the width of an element. By default, the property defines the width of the content area.
+ */
+    width: 750px;
+    height: 80px; /* The height property specifies the height of an element. By default, the property defines the height of the content area. 
+    */
+    min-height: 10px; /* The min-height property sets the minimum height of an element, and prevents the used value of the height property from becoming smaller than the value specified for min-height. */
+    min-width: 100px; /* 
+    The min-width property sets the minimum width of an element, and prevents the used value of the width property from becoming smaller than the value specified for min-width. */
+    max-height: 100px;
+    max-width: 800px;
+    /*
+    By setting left and right margins to auto we can center align a element. We need to use this "margin" property along with the "width" property.
+
+    We can only center elements horizontaly using this technic.
+    Use margin auto with "block elements" only.
+
+    To center an inline element we can always use "text-align:center".
+    */
+    margin: 0 auto; /* We set the top, bottom margin to 0; and left, right to auto. */
 }
+/*
+The vertical-align property specifies the vertical alignment of an inline or table-cell box.
+
+We can't use this CSS property to vertically align block-level elements.
+
+Property values: baseline, sub, super, text-top, text-bottom, middle, top, bottom
+*/
+img.top { vertical-align: text-top; }
+img.bottom { vertical-align: text-bottom; }
+img.middle { vertical-align: middle; }
