@@ -1,12 +1,16 @@
 extend ./May20_Page_Layout.pug
 block content
-    h1 superheroes
-    p This displays superhero information 
+    h1 SUPERHEROES
+    p This displays superhero information
 
     include ./May26_createNewSuperhero.pug
 
-    each item in superheroes
+    each item in documents
         div.superhero-container
-         h2= item.name
-         a(href="/superheros/" + item.id) details 
-    //- Default entry point file in pug "index.pug" - This is the same name as our entry point javascript file (index.js)
+            h2= item.name
+            a(href="/superheroes/" + item._id) DETAILS
+            br
+            a(href="#") EDIT
+            br
+            a(href="#") REMOVE ITEM
+    //- Default entry point file in pug "index.pug" - This is the same name as our entry point javascript file (index.js). "documents" - DB - defined in index.js file
