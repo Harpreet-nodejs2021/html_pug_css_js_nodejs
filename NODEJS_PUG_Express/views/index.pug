@@ -10,7 +10,7 @@ block content
             h2= item.name
             a(href="/superheroes/" + item._id) DETAILS
             br
-            a(href="#") EDIT
+            a(href="/edit/" + item._id) EDIT
             br
-            a(href="#") REMOVE ITEM
+            a(href="/delete/" + item._id) REMOVE ITEM
     //- Default entry point file in pug "index.pug" - This is the same name as our entry point javascript file (index.js). "documents" - DB - defined in index.js file

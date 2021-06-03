@@ -88,8 +88,13 @@ app.post('/superheroes', urlEncodedParser, function(req,res){
     const newSuperHero = {
         //id: newId, // to generate a New Id
         name: req.body.superhero, // Use same name as of the element defined in textbox of file "May26_createNewSuperhero.pug"
-        description: req.body.description
+        description: req.body.description,
+        weather: req.body.weather,
+        color: req.body.color
     }
+    //console.log(req.body.weather);
+    //console.log(req.body.color);
+
     //superheroes.push(newSuperHero);
     //res.redirect('/'); // New Superhero object gets created/ pushed to the page and page gets refreshed.
     mongoClient.connect(dbURL,function(err,client){
@@ -102,6 +107,54 @@ app.post('/superheroes', urlEncodedParser, function(req,res){
         });
     });
 }); 
+
+// Editing a Record
+
+app.get('/edit/:id', function(req,res){
+    const selectedId = req.params.id;
+    mongoClient.connect(dbURL,function(err,client){
+        const myDB = client.db('comics');
+        const myCollection = myDB.collection('superheroes');
+        const myQuery = {_id: objectId(selectedId)};
+
+        myCollection.find(myQuery).toArray(function(err,myData){
+            var selectedSuperHero = myData[0];
+            client.close();
+            res.render('June02_Edit', {superhero:selectedSuperHero});
+        });
+    });
+});
+
+app.post('/edit', urlEncodedParser, function(req,res){
+    const selectedId = req.body._id;
+    const myQuery ={_id: objectId(selectedId)}; // "myQuery" is the Filter that we are applying
+    const set = {$set: {name: req.body.superhero, description: req.body.description,weather: req.body.weather,color: req.body.color}};
+
+    mongoClient.connect(dbURL,function(err,client){
+        const myDB = client.db('comics');
+        const myCollection = myDB.collection('superheroes');
+        myCollection.updateOne(myQuery,set,(err,result)=>{
+            client.close();
+            res.redirect('/edit/' + selectedId); // To redirect the user to Edit page, not on home page (superhero page)
+        });
+    });
+}); 
+
+// Deleting a Record
+
+app.get('/delete/:id', function(req,res){
+    const selectedId = req.params.id; // Getting the Parameter
+    mongoClient.connect(dbURL,function(err,client){
+        const myDB = client.db('comics');
+        const myCollection = myDB.collection('superheroes');
+        const myQuery = {_id: objectId(selectedId)};
+
+        myCollection.deleteOne(myQuery,function(err,result){
+            client.close();
+            res.redirect('/');
+        });
+    });
+});
 
 // Another way to write Function Below using Arrow function (=>)
 
