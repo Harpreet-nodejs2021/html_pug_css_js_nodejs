@@ -105,7 +105,7 @@ router.get('/', function(req, res, next) {
   let error = myRecord.validateSync(); // Try-catch error block
   console.log(error);
 
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Happy Singh Express' });
 });
 
 module.exports = router;
