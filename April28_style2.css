@@ -1,7 +1,11 @@
 .firstspan{
     border: solid 1px green;
     margin: 5px;
-    cursor: help;
+    cursor: help; /*
+    The cursor property specifies which mouse cursor to display when the mouse pointer is over an element.
+
+    Property values: auto, crosshair, default, pointer, move, text, wait, help.
+    */
     box-shadow: 2px 3px 170px -8px rgba(0,0,0,0.8); /*
     The box-shadow property is used to add shadow effects around an element's frame. 
 
@@ -13,55 +17,128 @@
     */
 }
 
+/*--------------------------------------------------------------------*/
+
 .secondspan{
     border: dashed 1px green;
     margin: 5px;
     width: 160px;
-    display: block;
+    display: block; /*Every element on a web page is a rectangular box
+    
+    Property Values: inline/ block/ inline-block/ none/ table/ flex/ grid
+    
+    */
     cursor: wait;
     box-shadow: 2px 3px 170px -8px rgba(0,0,0,0.8) inset; /* With the Box Shadow property, we can also use the value "inset" to have an inner shadow. */
 }
+
+/*--------------------------------------------------------------------*/
 
 .thirdspan{
     border: solid 1px green;
     margin: 5px;
     display: inline;
     cursor: crosshair;
+    background: cyan url("Sample_news_image.jpg") no-repeat fixed center center; /*
+    The background property lets you adjust all background style options at once, including background-color, background-image, background-repeat method, background-attachment, and background-position (origin and size) property.
+    */
 }
+
+/*--------------------------------------------------------------------*/
 
 .fourthspan{
     margin: 5px;
     border: solid 1px green;
-    display: none;
+    display: none; /* The value "none" lets you turn off the display of an element. 
+    When you use none, all descendant elements also have their display turned off.
+    */
 }
+
+/*--------------------------------------------------------------------*/
 
 .fifthspan{
     margin: 5px;
     font-size: 30px;
     border: solid 1px green;
-    visibility: visible;
+    visibility: visible; /* The visibility property can show or hide an element without affecting the layout of a document. */
+    background: linear-gradient(60deg, brown, yellow); /* 
+    Property values: Angle first-color second-color 
+
+    linear-gradient() is a CSS function that creates an image consisting of a progressive transition between two or more colors along a straight line.
+    */
 }
+
+/*--------------------------------------------------------------------*/
 
 .sixthspan{
     margin: 5px;
     font-size: 50px;
     border: solid 1px green;
-    visibility: hidden;
+    visibility: hidden; /* Hide all tags' content which are using class = sixthspan */
 }
+/*
+"display:none"-> will remove the element.
+
+"visibility:hidden" -> will hide the element but it will still show the empty space for that element.
+*/
+
+/*--------------------------------------------------------------------*/
 
 p{
     color: chocolate;
     background-image: url("https://4.bp.blogspot.com/-cibC376RUHQ/VzsmvGC4YLI/AAAAAAAAB_Y/H0PfW_nUTZUt2qmmdPbaF_Qeh5l-DM9mwCLcB/w1200-h630-p-k-no-nu/barcelona%2Blogo.jpg");
-    background-repeat: repeat;
+    background-repeat: repeat; /* Repeat both x & y axix */
+    /* 
+    A background image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
+
+    background-repeat: repeat-X; 
+
+    Only repeat the image using the x axis.
+    */
     width:800px;
     height: 430px;
+    background-attachment: fixed; /*
+    The background-attachment property determines whether that image's position is fixed within the viewport, or scrolls along with its containing block.
+
+    Property values: fixed, scroll & local.
+
+    */
 }
+
+/*--------------------------------------------------------------------*/
 
 section{
     color: blue;
     font-size: 20px;
-    background-image: url("About us/dog_2_big.jpg");
-    background-repeat: repeat-y;
-    width:700px;
+    /* We can use multiple images comma separeted */
+    background-image: url("About us/dog_2_big.jpg"),url("About us/dog_5_big.jpg");
+    background-repeat: no-repeat; /* Only use the image(s) once */
+    /*
+    background-repeat: repeat-y; 
+    
+    Only repeat the image using the y axis.
+    */
+    width:800px;
     height: 600px;
+    background-position: 100px center; /* This background is going to be 100px from left to right, and is going to be centered over the y-axis. */
+    /* 
+    By default the image position is the top left corner. 
+
+    first property value (is for the x axis) -> Length (px) OR Left/ Center/ Right
+
+    Second property value (is for the y axis) -> Length (px) OR Top/ Center/ Bottom
+    
+    */
+    /*
+    Alternative values
+
+    background-position: 100px 20px; -> This background is going to be 100px from left to right, and 20px from top to bottom.
+
+    background-position: center bottom; -> The background image is going to be centered over the x axis and at the bottom of the element.
+
+    We can use different values combination -> left center/ center top/ right top/ left bottom, etc.
+
+    */
+    background-attachment: scroll;
+    cursor: move;
 }

@@ -1,21 +1,53 @@
 ul{
     list-style-type: square;
+    /*
+The "list-style-type" property specifies the appearance of a list item element.
+
+Property values for unordered lists -> none/ disc/ circle/ square
+*/
     list-style-position:inside;
+    list-style-image: url("easter-egg.jpg"); /* The "list-style-image" property specifies an image to be used as the list item marker. */
 }
+/*
+The "list-style-type" Property values for ordered lists -> decimal/ decimal-leading-zero/ lower-alpha/ upper-alpha/ lower-roman/ upper-roman
+*/
 ol{
-    list-style-type: lower_roman outside;
-    /* list-style-position:outside; */
+    list-style: lower-roman outside; /* list-style-type, list-style-image, and list-style-position */
+    /* 
+    Alternatively
+
+    list-style-type: lower-roman;
+    list-style-position: outside; 
+    */
 }
 
+/*--------------------------------------------------------------------*/
+
 table{
-    border-spacing: 50px;
-    /* border-collapse: collapse; */
+    /* Tables have some special properties like "border-spacing" & "border-collapse". */
+    border-spacing: 50px; /* 
+    We can use the same value for all sides.
+    
+    border-spacing: 10px 20px;
+
+    If we use 2 values, then we can set the horizontal and vertical spacing.
+    */
+    /* border-collapse: collapse; 
+    
+    The "border-collapse" CSS property specifies whether cells inside a table have shared or separate borders.
+    
+    Property values: collapse & separate
+    */
 }
+
+/*--------------------------------------------------------------------*/
 
 input[type="text"] {
     border: 1 px solid purple;
-    color: purple;
+    background-color: orchid;
+    color: cyan;
     outline: none;
+    font-size: 16px;
 }
 
 input.error{
@@ -24,8 +56,23 @@ input.error{
 }
 
 input[type="text"].success{
-    color: cyan;
+    color: purple;
     border-color: navy;
+}
+
+input[type="submit"] {
+    display: block;
+    border: 2px solid black;
+    margin: 20px;
+    color: black;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+  
+input[type="submit"]:hover {
+    background-color:greenyellow;
+    cursor: pointer;
 }
 
 div.weekdays{

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning CSS</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container{
+            background-color: gray;
+            width: 600px;
+            margin:auto;
+        }
+        #container a{/* Link inside a div with id=container */
+            /*display: block;
+            One link feature on one line
+            */
+            /*display: inline;
+            All links feature on same line
+            */
+            /*display: inline-block;
+            */
+            /*display: table;*/
+            /*
+            display: flex;
+            Similar to block - with left-side alignment
+            */
+            display: grid; /* Similar to block - with center alignment */
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid black;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        a:hover{
+            background-color: #eee;
+            color: gray;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <a href="#">link</a>
+      <a href="#">link</a>
+      <a href="#">link</a>
+      <a href="#">link</a>
+      <a href="#">link</a>
+    </div>
+  </body>
+</html>
