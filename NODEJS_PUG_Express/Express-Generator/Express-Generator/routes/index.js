@@ -63,7 +63,20 @@ router.get('/', function(req, res, next) {
 
 var mongoose = require('mongoose');
 
-var mongoDB = 'mongodb://127.0.0.1/june_db';
+// var mongoDB = 'mongodb://127.0.0.1/june_db'; 
+
+/* MongoDB Atlas Connection String
+
+mongodb+srv://TestUserHappy:<password>@cluster0.hxxgu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+-> Replace <password> with the password for the TestUserHappy user. Replace myFirstDatabase with the name of the database that connections will use by default. Ensure any option params are URL encoded.
+
+*/
+
+// Connecting our Application with Cloud MongoDB server. Earlier we used local MongoDB Server.
+
+var mongoDB = 'mongodb+srv://TestUserHappy:<password>@cluster0.hxxgu.mongodb.net/myFirstDatabase?retryWrites=true&w=majorityb';
+
 mongoose.connect(mongoDB,{useNewUrlParser:true, useUnifiedTopology:true});
 
 var db = mongoose.connection;
