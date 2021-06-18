@@ -1,4 +1,5 @@
 var express = require('express');
+var dotenv = require('dotenv');
 var router = express.Router();
 
 /*
@@ -62,6 +63,7 @@ router.get('/', function(req, res, next) {
 */
 
 var mongoose = require('mongoose');
+dotenv.config();
 
 // var mongoDB = 'mongodb://127.0.0.1/june_db'; 
 
@@ -75,7 +77,13 @@ mongodb+srv://TestUserHappy:<password>@cluster0.hxxgu.mongodb.net/myFirstDatabas
 
 // Connecting our Application with Cloud MongoDB server. Earlier we used local MongoDB Server.
 
-var mongoDB = 'mongodb+srv://TestUserHappy:<password>@cluster0.hxxgu.mongodb.net/myFirstDatabase?retryWrites=true&w=majorityb';
+// var mongoDB = 'mongodb+srv://TestUserHappy:<password>@cluster0.hxxgu.mongodb.net/myFirstDatabase?retryWrites=true&w=majorityb';
+
+// Use config variables created on Heroku for our application instead of hard coded URL for DB connection.
+
+var mongoDB = process.env.MongoDB_URI;
+
+console.log(mongoDB); // Just to see if the connection is made to local MongoDB.
 
 mongoose.connect(mongoDB,{useNewUrlParser:true, useUnifiedTopology:true});
 
